@@ -447,8 +447,13 @@ app.controller('mainFriendController', function($scope){
     }
 	];
 	// Add an attribute called searchTerm to your FriendController scope variable to store the value of a search term inputted by the user
-	$scope.searchTerm = $scope.searchFriends;
+	$scope.searchTerm = '';
+
+	// Create two variables in your friend controller, one for the attribute to sort on and another boolean for an ascending vs descending sort
+	$scope.sortBy;
+	$scope.ascVSdesc;
 
 	// TODO >> Add in for loop and if statement looking for hashtag and bind to html 
+	// >> Switch # of friends from a string to a number
 
 })
