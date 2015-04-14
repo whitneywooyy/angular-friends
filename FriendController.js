@@ -453,6 +453,15 @@ app.controller('mainFriendController', function($scope){
 	$scope.sortBy;
 	$scope.ascVSdesc;
 
+    // BLACK DIAMOND: Use ng-options and an array to create the filter options
+    $scope.filterOptions = [
+        { value: "name", label: "Name"},
+        { value: "friend_count", label: "# Friends"},
+        { value: "current_location.city", label: "City"},
+        { value: "current_location.state", label: "State"},
+        { value: "current_location.country", label: "Country"}
+    ];
+
 	// TODO >> Add in for loop and if statement looking for hashtag and bind to html 
 	// >> Switch # of friends from a string to a number
 

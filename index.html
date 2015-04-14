@@ -19,17 +19,24 @@
     <input class="form-control" placeholder="Search Your Friends By Name" ng-model="searchFriends.name">
     <input class="form-control" placeholder="Search Your Friends By Location" ng-model="searchFriends.current_location">
 
-      <select class="input-medium" ng-model="sortBy">
+    <!-- <select class="input-medium" ng-model="sortBy">
           <option value="name">Name</option>
           <option value="friend_count"># friends</option>
           <option value="current_location.city">City</option>
           <option value="current_location.state">State</option>
           <option value="current_location.country">Country</option>
-      </select>
-      <select class="input-medium" ng-model="ascVSdesc">
+      </select> -->
+
+<!-- BLACK DIAMOND: Use ng-options and an array to create the filter options -->
+
+  <select class="input-medium" ng-model="sortBy" ng-options="option.value as option.label for option in filterOptions">
+  </select>
+  <select class="input-medium" ng-model="ascVSdesc">
           <option value="true">Descending</option>
           <option value="false">Ascending</option>
-      </select>
+  </select>
+
+      
     </div>
   </form>
 
